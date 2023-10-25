@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Signature Detection</title>
+    <!-- Link to Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4">
+            Custom ML <span class="animated-title">Model for Signature Detection</span>
+        </h1>
+        <form action="/predict" method="post" enctype="multipart/form-data" class="mt-4">
+            <div class="mb-3">
+                <input type="file" name="image" accept="image/*" class="input form-control" required>
+            </div>
+            <div class="mb-3">
+                <img id="uploaded-image" src="" style="display: none;" alt="Uploaded Image" class="img-thumbnail" style="max-width: 300px; max-height: 300px;">
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+</body>
+<script>
+    // JavaScript to display the selected image
+    const inputElement = document.querySelector('input[type="file"]');
+    inputElement.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        const uploadedImage = document.getElementById('uploaded-image');
+        if (file) {
+            const imageURL = URL.createObjectURL(file);
+            uploadedImage.src = imageURL;
+            uploadedImage.style.display = 'block';
+        } else {
+            uploadedImage.src = '';
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,89 @@
+body {
+    background-color: #2d6d9a; /* Blue background color */
+    color: #fff; /* White text color */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.btn{
+
+    font-size: 30px;
+    font-weight: bolder;
+}
+.input{
+
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 20px;
+}
+.container {
+    background-color: #3c8ccf; /* Lighter blue container background color */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+h1 {
+    color: #ffbf00; /* Yellow header text */
+    font-size: 48px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+
+input[type="file"] {
+    background-color: #fff; /* White background for the input */
+    border: 1px solid #ffbf00; /* Yellow border */
+    color: #333; /* Dark text color */
+    font-size: 30px;
+    height: 80px; /* Increased input height */
+    
+}
+
+.btn-primary {
+    background-color: #ffbf00; /* Yellow button background */
+    border: none;
+    padding: 20px;
+}
+.btn-primary:focus, .btn-primary:active, .btn-primary:hover {
+    background-color: #ffaa00; /* Slightly darker yellow on hover */
+}
+
+.btn-primary:hover {
+    background-color: #ffaa00; /* Slightly darker yellow on hover */
+}
+/* Add CSS for the sliding animation */
+.animated-title {
+    display: inline-block;
+    transform: translateX(0);
+    animation: slideAnimation 2s infinite;
+    font-weight: bolder;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+        color: rgb(237, 153, 153);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
